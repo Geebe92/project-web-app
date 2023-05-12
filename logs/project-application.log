@@ -1,0 +1,3 @@
+2023-05-12 11:20:46.795 [restartedMain] INFO  c.p.webapp.ProjectWebAppApplication.logStarting(55) - Starting ProjectWebAppApplication using Java 20 on DESKTOP-UBVMRLS with PID 7320 (C:\Users\chewb\IdeaProjects\project-web-app\build\classes\java\main started by chewb in C:\Users\chewb\IdeaProjects\project-web-app)
+2023-05-12 11:20:46.797 [restartedMain] INFO  c.p.webapp.ProjectWebAppApplication.logStartupProfileInfo(634) - No active profile set, falling back to 1 default profile: "default"
+2023-05-12 11:20:48.103 [restartedMain] INFO  c.p.webapp.ProjectWebAppApplication.logStarted(61) - Started ProjectWebAppApplication in 1.806 seconds (JVM running for 2.469)
