@@ -10,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
 import com.project.webapp.model.Student;
-import com.project.webapp.service.StudentService;
 import com.project.webapp.service.StudentServiceImpl;
 
 import javax.validation.Valid;
@@ -68,7 +67,7 @@ public class StudentController {
     @PostMapping(params="delete", path = "/studentEdit") // metoda zostanie wywołana, jeżeli przesłane
     public String projektEditDelete(@ModelAttribute Student student, @RequestBody String studentId) {// żądanie będzie zawierało parametr 'delete'
         logger.info("Deleting a student: ", studentId);
-        studentService.deleteStudent(student.getstudent_id());
+        studentService.deleteStudent(student.getStudentId());
         return "redirect:/studentList";
     }
 }

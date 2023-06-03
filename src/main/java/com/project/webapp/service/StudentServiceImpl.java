@@ -18,7 +18,7 @@ import java.util.Optional;
 @Service
 public class StudentServiceImpl implements StudentService{
     private static final Logger logger = LoggerFactory.getLogger(ProjektServiceImpl.class);
-    private static final String RESOURCE_PATH = "/api/studenci";
+    private static final String RESOURCE_PATH = "/api/student";
 
     @Value("${rest.server.url}")
 
@@ -40,8 +40,8 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public Student setStudent(Student student) {
-        if (student.getstudent_id() != null) { // modyfikacja istniejącego projektu
-            String url = getUriStringComponent(student.getstudent_id());
+        if (student.getStudentId() != null) { // modyfikacja istniejącego projektu
+            String url = getUriStringComponent(student.getStudentId());
             logger.info("REQUEST -> PUT {}", url);
             restTemplate.put(url, student);
             return student;
