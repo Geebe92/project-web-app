@@ -40,8 +40,8 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public Student setStudent(Student student) {
-        if (student.getstudent_id() != null) { // modyfikacja istniejącego projektu
-            String url = getUriStringComponent(student.getstudent_id());
+        if (student.getStudentId() != null) { // modyfikacja istniejącego projektu
+            String url = getUriStringComponent(student.getStudentId());
             logger.info("REQUEST -> PUT {}", url);
             restTemplate.put(url, student);
             return student;
