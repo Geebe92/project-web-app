@@ -10,7 +10,7 @@ public class Student {
     @JsonIgnoreProperties({"studenci"})
     private Set<Projekt> projekty;
 
-    public Integer studentId;
+    public Integer student_id;
 
     private String imie;
 
@@ -22,12 +22,12 @@ public class Student {
 
     private boolean stacjonarny;
 
-    public Integer getStudentId() {
-        return studentId;
+    public Integer getstudent_id() {
+        return student_id;
     }
 
     public void setStudentId(Integer studentId) {
-        this.studentId = studentId;
+        this.student_id= studentId;
     }
 
     public String getImie() {
