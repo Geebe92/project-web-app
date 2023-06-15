@@ -18,7 +18,7 @@ import java.util.Optional;
 @Service
 public class StudentServiceImpl implements StudentService{
     private static final Logger logger = LoggerFactory.getLogger(ProjektServiceImpl.class);
-    private static final String RESOURCE_PATH = "/api/student";
+    private static final String RESOURCE_PATH = "/api/studenci";
 
     @Value("${rest.server.url}")
 

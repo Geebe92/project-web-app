@@ -8,7 +8,7 @@
 <body>
 <div class="root" th:with="isDelete=${#strings.equalsIgnoreCase(param.delete,'true')}">
   <form action="#" th:action="@{/studentEdit}" th:object="${student}" method="POST"
-        th:with="akcja=*{student_id} ? (${isDelete}?'delete':'update') :'create', opis=*{student_id} ?
+        th:with="akcja=*{studentId} ? (${isDelete}?'delete':'update') :'create', opis=*{studentId} ?
  (${isDelete}?'Usuń':'Aktualizuj') : 'Utwórz'" autocomplete="off">
 
     <h1 th:text="${opis} + ' studenta'">Edytuj studenta</h1>
@@ -24,9 +24,9 @@
         <input class="btn" type="submit" name="create" value="create" th:name="${akcja}" th:value="${opis}" />
         <input class="btn" type="submit" name="cancel" value="Anuluj" />
       </div>
-      <div th:if="*{student_id}">
-        <label for="student_id" class="lbl">Id:</label>
-        <input th:field="*{student_id}" class="fld" readonly />
+      <div th:if="*{studentId}">
+        <label for="studentId" class="lbl">Id:</label>
+        <input th:field="*{studentId}" class="fld" readonly />
       </div>
       <div>
         <label for="Imie" class="lbl">Imie:</label>
